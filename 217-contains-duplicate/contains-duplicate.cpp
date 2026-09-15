@@ -4,12 +4,10 @@ public:
         unordered_map<int,int> freq;
         for(int num:nums){
             freq[num]++;
+             if(freq[num] >= 2)
+        return true;
         }
-        for(int num:nums){
-            if(freq[num]>=2){
-                return true;
-            }
-        }
+       
         return false;
     }
 };
